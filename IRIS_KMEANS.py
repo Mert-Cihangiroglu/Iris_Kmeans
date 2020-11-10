@@ -49,7 +49,7 @@ def k_means(data, k):
                 cluster_data[i, 0] = min_index    # cluster data holds the cluster no and the distance to the centroid
             
         for j in range(k):  
-            cluster_index = np.nonzero(cluster_data[:, 0] == j) #make a tuple of cluster indexes
+            cluster_index = np.nonzero(cluster_data[:, 0] == j) # cluster indexes
             points_in_cluster = data[cluster_index] #now it is time to take the values of  points in the cluster  and we will calculate the new mean of each cluster 
             centroids[j, :] = np.mean(points_in_cluster,axis=0) # Calculate the mean of each clusters and give an updated version of the centers of each cluster
             
